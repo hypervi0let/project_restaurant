@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<pizza>
+		<item>
+			<name>Hawaiian</name>
+			<s_price>5.99</s_price>
+			<l_price>8.00</l_price>
+		</item>
+		<item>
+			<name>Pepperoni</name>
+			<s_price>5.99</s_price>
+			<l_price>8.00</l_price>
+		</item>
+		<item>
+			<name>Meat Feast</name>
+			<s_price>5.99</s_price>
+			<l_price>8.00</l_price>
+		</item>
+		<item>
+			<name>Tuna</name>
+			<s_price>5.99</s_price>
+			<l_price>8.00</l_price>
+		</item>
+		<item>
+			<name>Vegetarian</name>
+			<s_price>5.99</s_price>
+			<l_price>8.00</l_price>
+		</item>
+	</pizza>
+	<burgers>
+		<item>
+			<name>Hamburger</name>
+			<price>1.99</price>
+		</item>
+		<item>
+			<name>Cheeseburger</name>
+			<price>2.10</price>
+		</item>
+		<item>
+			<name>Quarter Pounder</name>
+			<price>2.50</price>
+		</item>
+		<item>
+			<name>Quarter Pounder with Cheese</name>
+			<price>2.60</price>
+		</item>
+	</burgers>
+	<kebabs>
+		<item>
+			<name>Lamb Donner</name>
+			<s_price>4.00</s_price>
+			<l_price>5.50</l_price>
+		</item>
+		<item>
+			<name>Chicken Donner</name>
+			<s_price>4.00</s_price>
+			<l_price>5.50</l_price>
+		</item>
+		<item>
+			<name>Lamb Shish</name>
+			<s_price>4.50</s_price>
+			<l_price>6.00</l_price>
+		</item>
+		<item>
+			<name>Chicken Shish</name>
+			<s_price>4.50</s_price>
+			<l_price>6.00</l_price>
+		</item>
+		<item>
+			<name>Kofte</name>
+			<s_price>4.30</s_price>
+			<l_price>5.70</l_price>
+		</item>
+	</kebabs>
+	<extras>
+		<item>
+			<name>Chips</name>
+			<s_price>1.00</s_price>
+			<l_price>1.50</l_price>
+		</item>
+		<item>
+			<name>Potato Wedges</name>
+			<s_price>1.00</s_price>
+			<l_price>1.50</l_price>
+		</item>
+		<item>
+			<name>Flatbread</name>
+			<s_price>0.30</s_price>
+			<l_price>0.50</l_price>
+		</item>
+		<item>
+			<name>Chicken Nuggets</name>
+			<s_price>1.20</s_price>
+			<l_price>1.60</l_price>
+		</item>
+	</extras>
+	<drinks>
+		<item>
+			<name>Water</name>
+			<s_price>0.60</s_price>
+			<l_price>1.50</l_price>
+		</item>
+		<item>
+			<name>Coke</name>
+			<s_price>0.60</s_price>
+			<l_price>1.50</l_price>
+		</item>
+		<item>
+			<name>Lemonade</name>
+			<s_price>0.60</s_price>
+			<l_price>1.50</l_price>
+		</item>
+		<item>
+			<name>Orangeade</name>
+			<s_price>0.60</s_price>
+			<l_price>1.50</l_price>
+		</item>
+		<item>
+			<name>Cherryade</name>
+			<s_price>0.60</s_price>
+			<l_price>1.50</l_price>
+		</item>
+		<item>
+			<name>Orange Juice</name>
+			<s_price>0.60</s_price>
+			<l_price>1.50</l_price>
+		</item>
+	</drinks>
+</menu>
