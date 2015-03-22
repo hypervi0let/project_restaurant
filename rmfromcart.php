@@ -2,7 +2,13 @@
 session_start();
 
 $key = $_GET['id'];
-unset($_SESSION['cart'][$key]);
+
+if ($_SESSION['cart'][$key]['qty'] > 1) {
+	$_SESSION['cart'][$key]['qty']--;
+}
+else {
+	unset($_SESSION['cart'][$key]);
+}
 
 
 header("Location: {$_SERVER['HTTP_REFERER']}");
