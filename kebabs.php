@@ -1,4 +1,4 @@
-<table>
+<table id="tablemenu">
 	<thead>
 		<tr>
 			<th>Kebabs</th>
@@ -12,15 +12,28 @@
       foreach ($dom->xpath("/menu/kebabs/item") as $menu)
       {
 
+      		$name = $menu->name;
+					$s_price = $menu->s_price;
+					$l_price = $menu->l_price;
           print "<tr>";
           print "<td>";
-          print $menu->name;
+          print $name;
           print "</td>";
           print "<td>";
-          print "<a href='addtocart.php?id=" .  $menu->name . "'>"  . "&pound;" . $menu->s_price . "</a>";
+          print "<form method='post' action='addtocart.php'>";
+          print "<input type='hidden' value='$name' name='name'>";
+          print "<input type='hidden' value='Small' name='size'>";
+          print "<input type='hidden' value='$s_price' name='price'>";
+          print "<input type='submit' value='" . "&pound;" . "$s_price'>";
+          print "</form>";         
           print "</td>";
           print "<td>";
-          print "<a href='addtocart.php?id=" .  $menu->name . "'>"  . "&pound;" . $menu->l_price . "</a>";
+          print "<form method='post' action='addtocart.php'>";
+          print "<input type='hidden' value='$name' name='name'>";
+          print "<input type='hidden' value='Large' name='size'>";
+          print "<input type='hidden' value='$l_price' name='price'>";
+          print "<input type='submit' value='" . "&pound;" . "$l_price'>";
+          print "</form>";
           print "</td>";
           print "</tr>";
 

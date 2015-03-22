@@ -1,4 +1,4 @@
-<table>
+<table id="tablemenu">
 	<thead>
 		<tr>
 			<th>Burgers</th>
@@ -11,12 +11,20 @@
       foreach ($dom->xpath("/menu/burgers/item") as $menu)
       {
 
+      		$name = $menu->name;
+					$price = $menu->price;
           print "<tr>";
           print "<td>";
-          print $menu->name;
+          print $name;
           print "</td>";
           print "<td>";
-          print "<a href='addtocart.php?id=" .  $menu->name . "'>"  . "&pound;" . $menu->price . "</a>";
+          print "<form method='post' action='addtocart.php'>";
+          print "<input type='hidden' value='$name' name='name'>";
+          print "<input type='hidden' value='' name='size'>";
+          print "<input type='hidden' value='$price' name='price'>";
+          print "<input type='submit' value='" . "&pound;" . "$price'>";
+          print "</form>";         
+          print "</td>";
           print "</td>";
           print "</tr>";
 

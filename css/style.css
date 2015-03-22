@@ -33,16 +33,30 @@ nav li {
 	display:inline-block;
 }
 
-table {
+div {
+	width:100%;
+}
+
+#tablemenu {
 	width:100%;
 	text-align:left;
 	table-layout:fixed;
 }
 
+.cartothers {
+	text-align:right;
+	table-layout:fixed;
+	width: 10%;
+}
+#cartname {
+	text-align:left;
+	width:10%;
+}
+
 #content {
 	padding:5px;
 	float:left;
-	width:75%;
+	max-width:65%;
 	border-style: solid;
   border-width: 1px;
   -webkit-box-sizing: border-box;
@@ -53,7 +67,7 @@ table {
 #cart {
 	padding:5px;
 	float:right;
-	width:24%;
+	width:30%;
 	border-style: solid;
   border-width: 1px;
   -webkit-box-sizing: border-box;

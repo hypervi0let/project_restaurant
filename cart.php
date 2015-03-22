@@ -1,10 +1,11 @@
 <?php
 	session_start();
 ?>
+<div>
 <form action="clear.php" method="post">
 <input type="submit" value="Clear Cart" />
 </form>
-<table>
+<table id="tablecart">
 	<thead>
 		<tr>
 			<th>Cart</th>
@@ -14,25 +15,22 @@
 	<tbody>
    <?php
    
-   		$xmlmenu = simplexml_load_file("menu.xml");
+   		$xml = simplexml_load_file("menu.xml");
       $sess = $_SESSION['cart'];
-      foreach ($sess as $cart)
+      foreach ($sess as $key => $cart)
       {
-
           print "<tr>";
-          print "<td>";
-          print $cart;
-          print "</td>";
-          print "<td>";
-          print "<a href='rmfromcart.php?id=" . $cart . "'>"  . "[x]" . "</a>";
-          print "</td>";
-          print "</tr>";
+          print "<td id='cartname'>" . $cart['name'] . "</td>";
+          print "<td class='cartothers'>" . $cart['size'] . "</td>";
+          print "<td class='cartothers'>" . "&pound;" . $cart['price'] . "</td>";
+          print "<td class='cartothers'>" . "<a href='rmfromcart.php?id=" . $key . "'>"  . "[x]" . "</a>" . "</td>";
+          print "</tr>"; 
           
-
+         
       }
+      
 		?>
    
 	</tbody>
 </table>
-
-
+</div>

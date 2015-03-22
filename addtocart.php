@@ -5,7 +5,9 @@
 		$_SESSION['cart'] = array();
 	}
 	
-	array_push($_SESSION['cart'], $_GET['id']);
+	$item = array('name' => $_POST['name'], 'size' => $_POST['size'], 'price' => (float)$_POST['price']);
+	
+	array_push($_SESSION['cart'], $item);
 	
 	header("Location: {$_SERVER['HTTP_REFERER']}");
 	exit;
