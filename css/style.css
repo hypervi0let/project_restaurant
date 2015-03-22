@@ -42,6 +42,10 @@ div {
 	text-align:left;
 	table-layout:fixed;
 }
+#tablecart {
+	text-align:left;
+	table-layout:fixed;
+}
 
 .cartothers {
 	text-align:right;

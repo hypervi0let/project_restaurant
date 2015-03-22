@@ -5,7 +5,7 @@
 		$_SESSION['cart'] = array();
 	}
 	
-	$item = array('name' => $_POST['name'], 'size' => $_POST['size'], 'price' => (float)$_POST['price']);
+	$item = array('name' => $_POST['name'], 'size' => $_POST['size'], 'price' => $_POST['price']);
 	
 	array_push($_SESSION['cart'], $item);
 	
