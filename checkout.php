@@ -9,7 +9,7 @@ if (!empty($_SESSION['cart'])) {
 	// exit;
 }
 else {
-	print "<p>Your cart is empty, <a href='" . $_SERVER['HTTP_REFERER'] . "'>go back?</a>";
+	print "<p>Your cart is empty, <a href='" . "javascript:history.go(-1)" . "'>go back?</a>";
 	
 }
 ?>
