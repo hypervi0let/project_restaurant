@@ -30,7 +30,8 @@ foreach ($sess as $cart) {
     $total = $total + $cart['price'] * $cart['qty'];
 }
 if ($total > 0) {
-    print "<tr><td></td><td></td><td></td><td><br>Total: &pound;" . number_format((float) $total, 2, '.', '') . "</td></tr>";
+    print "<tr><td></td><td></td><td></td><td><br>Total:<br> &pound;" . number_format((float) $total, 2, '.', '') . "</td></tr>";
+    $_SESSION['total'] = $total;
 }
 ?>
 	</tbody>

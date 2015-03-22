@@ -33,7 +33,8 @@ $pages = array(
     'kebabs',
     'extras',
     'drinks',
-    'cart'
+    'cart',
+    'checkout'
 );
 if (!empty($page)) {
     if (in_array($page, $pages)) {
