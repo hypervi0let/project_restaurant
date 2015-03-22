@@ -41,7 +41,8 @@ if ($total > 0) {
 <form action="clear.php" method="post">
 	<input type="submit" value="Clear Cart">
 </form>
-<form action="checkout.php" method="post">
+<form action="index.php" method="get">
+	<input type="hidden" value="checkout" name="page">
 	<input type="submit" value="Checkout">
 </form>
 </div>
