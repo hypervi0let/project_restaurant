@@ -23,7 +23,7 @@ session_start();
 		</ul>
 	</nav>
 		<div id="content">
-				<?php
+<?php
 error_reporting(E_ALL ^ E_NOTICE);
 
 $page  = $_GET['page'];

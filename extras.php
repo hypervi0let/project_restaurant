@@ -1,4 +1,4 @@
-<table id="tablemenu">
+<table id="menutable">
 <thead>
 	<tr>
 		<th>Extras</th>
@@ -7,7 +7,7 @@
 		</tr>
 		</thead>
 		<tbody>
-   <?php
+<?php
 $dom = simplexml_load_file("menu.xml");
 foreach ($dom->xpath("/menu/extras/item") as $menu) {
     
@@ -23,6 +23,7 @@ foreach ($dom->xpath("/menu/extras/item") as $menu) {
     print "<input type='hidden' value='$name' name='name'>";
     print "<input type='hidden' value='Small' name='size'>";
     print "<input type='hidden' value='$s_price' name='price'>";
+    print "<input type='hidden' value='1' name='qty'>";
     print "<input type='submit' value='" . "&pound;" . "$s_price'>";
     print "</form>";
     print "</td>";
@@ -31,6 +32,7 @@ foreach ($dom->xpath("/menu/extras/item") as $menu) {
     print "<input type='hidden' value='$name' name='name'>";
     print "<input type='hidden' value='Large' name='size'>";
     print "<input type='hidden' value='$l_price' name='price'>";
+    print "<input type='hidden' value='1' name='qty'>";
     print "<input type='submit' value='" . "&pound;" . "$l_price'>";
     print "</form>";
     print "</td>";
