@@ -1,5 +1,5 @@
 <?php
-	session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,30 +24,35 @@
 	</nav>
 		<div id="content">
 				<?php
-					error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL ^ E_NOTICE);
 
-					$page = $_GET['page'];
-					$pages = array('pizza', 'burgers', 'kebabs', 'extras', 'drinks', 'cart');
-					if (!empty($page)) {
-    				if(in_array($page,$pages)) {
-        		$page .= '.php';
-        		include($page);
-    			}
-    			else {
-        		echo 'Page not found. Return
+$page  = $_GET['page'];
+$pages = array(
+    'pizza',
+    'burgers',
+    'kebabs',
+    'extras',
+    'drinks',
+    'cart'
+);
+if (!empty($page)) {
+    if (in_array($page, $pages)) {
+        $page .= '.php';
+        include($page);
+    } else {
+        echo 'Page not found. Return
         		<a href="index.php">home</a>';
-    			}
-				}
-				else {
-    			include('home.php');
-				}
-			?>
+    }
+} else {
+    include('home.php');
+}
+?>
 		</div>
 	
 		<div id="cart">
 			<?php
-				include('cart.php');
-			?>
+include('cart.php');
+?>
 		</div>
 	</div>
 </body>
