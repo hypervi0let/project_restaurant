@@ -16,7 +16,7 @@ session_start();
 
 $xml  = simplexml_load_file("menu.xml");
 $sess = $_SESSION['cart'];
-foreach ($sess as $key => $cart) {
+foreach ((array) $sess as $key => $cart) {
     print "<tr>";
     print "<td id='cartname'>" . $cart['name'] . "</td>";
     print "<td>" . $cart['size'] . "</td>";
@@ -26,7 +26,7 @@ foreach ($sess as $key => $cart) {
     print "</tr>";
 }
 $total = 0;
-foreach ($sess as $cart) {
+foreach ((array) $sess as $cart) {
     $total = $total + $cart['price'] * $cart['qty'];
 }
 if ($total > 0) {
